@@ -1,0 +1,81 @@
+li { 
+    
+    display:block;
+}
+
+.Pokecard {
+  
+    float:left;
+    width: 300px;
+    padding: 10px;
+    transform: rotateY(90deg);
+    box-shadow: 7px 10px 12px -5px rgba(0, 0, 0, 0.56);
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+    border: 12px solid #fcb61e;
+    z-index: -1;
+}
+
+.Pokecard-data {
+   font-weight: 700;
+   margin-bottom: 1rem;
+}
+
+.Pokecard-img {
+    
+    height: 200px;
+    background-color: #eceff1;
+    border: 5px solid #fcb61e;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.Pokecard img{
+    transition: all ease 500ms;
+    
+}
+
+.Pokecard img:hover {
+    transform: scale(1.25);
+    opacity:0.8;
+
+}
+
+
+.back {
+   
+    z-index: 0;
+    background-image: url("https://i.imgur.com/zyEsx2t.png");
+    background-size: 344px 446px;
+    background-repeat: no-repeat;
+    width: 344px;
+    height:446px;
+    border-radius: 20px;
+    box-shadow: 7px 10px 12px -5px rgba(0, 0, 0, 0.56);
+    text-align: center;    
+}
+
+
+.back {
+    
+        animation: untwirl 0.75s 0.75s ease-out forwards;
+    
+}
+
+.Pokecard {
+   
+    animation: twirl 0.75s 1.5s ease-in forwards ;
+}
+
+@keyframes twirl{
+    0%{ transform: rotateY(90deg) }
+    100%{ transform: rotateY(0deg) }
+}
+
+@keyframes untwirl{
+    0%{ transform: rotateY(0deg);}
+    100%{ transform: rotateY(90deg);}
+}
